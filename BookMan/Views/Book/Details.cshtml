@@ -1,0 +1,12 @@
+﻿@model BookMan.Models.Book
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<partial name="_Single" model="Model" />
+
+<hr />
+<div>
+    <a asp-action="Read" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-dark">Read</a>
+    <a asp-action="Index" class="btn btn-sm btn-outline-secondary">Back to list</a>
+</div>
